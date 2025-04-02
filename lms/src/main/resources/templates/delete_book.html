@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Delete Book</title>
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../static/css/style.css">
+</head>
+<body>
+<h2 align="center" th:for="${book.title}">Are you sure you want to delete the Book?</h2>
+<form th:action="@{/book/delete/{id}(id=${book.id})}" method="post">
+    <button type="submit">OK</button>
+    <a href="/lms">Cancel</a>
+</form>
+</body>
+</html>
